@@ -1,0 +1,15 @@
+<% if @likes.any? %>
+  <div class="row">
+    <div class="col-sm">
+      <h1>Favorites</h1>
+      <%= render 'microposts/microposts', microposts: @likes %>
+      <%= link_to "back to profile", user_path %>
+    </div>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <div class="text-center">
+      <p>no favorites</p>
+    </div>
+  </div>
+<% end %>
