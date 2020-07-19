@@ -1,0 +1,13 @@
+<% if @likes.any? %>
+  <div class="row">
+    <div class="col-sm">
+      <%= render 'favorites/favorites', likes: @likes %>
+    </div>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <div class="text-center">
+      <p>no favorites</p>
+    </div>
+  </div>
+<% end %>
